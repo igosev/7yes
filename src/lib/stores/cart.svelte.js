@@ -2,7 +2,7 @@ const createCart = () => {
   const cartInit = [
     {
       name: "Candle in concrete bowl",
-      link: "/",
+      link: "./",
       image: "01",
       qty: 2,
       price: 11.00,
@@ -12,14 +12,14 @@ const createCart = () => {
     },
     {
       name: "Exquisite glass vase",
-      link: "/",
+      link: "./",
       image: "02",
       price: 23.00,
       qty: 1
     },
     {
       name: "Set for a dinner party of 7 items",
-      link: "/",
+      link: "./",
       image: "03",
       price: 47.00,
       qty: 1

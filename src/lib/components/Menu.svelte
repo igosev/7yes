@@ -5,44 +5,44 @@
   const menu = [
     {
       name: "Categories",
-      link: "/",
+      link: "./",
       active: false,
       sub: [
         {
           name: "Category 1",
-          link: "/",
+          link: "./",
           active: false,
         },
         {
           name: "Category 2",
-          link: "/",
+          link: "./",
           active: false,
         },
         {
           name: "Category 3",
-          link: "/",
+          link: "./",
           active: false,
         },
       ],
     },
     {
       name: "Pages",
-      link: "/",
+      link: "./",
       active: true,
       sub: [
         {
           name: "Page 1",
-          link: "/",
+          link: "./",
           active: false,
         },
         {
           name: "Checkout",
-          link: "/",
+          link: "./",
           active: true,
         },
         {
           name: "Page 3",
-          link: "/",
+          link: "./",
           active: false,
         },
       ],
@@ -50,28 +50,28 @@
     {
       name: "Account",
       active: false,
-      link: "/",
+      link: "./",
       sub: [
         {
           name: "Settings",
-          link: "/",
+          link: "./",
           active: false,
         },
         {
           name: "Logout",
-          link: "/",
+          link: "./",
           active: false,
         },
       ],
     },
     {
       name: "Blog",
-      link: "/",
+      link: "./",
       active: false,
     },
     {
       name: "Reviews",
-      link: "/",
+      link: "./",
       active: false,
     },
   ];
