@@ -1,5 +1,5 @@
 <script>
-  let {breadcrumbs} = $props();
+  let { breadcrumbs } = $props();
 </script>
 
 <div class="breadcrumbs text-sm font-medium">
@@ -12,7 +12,9 @@
           </a>
         </li>
       {:else}
-        <li class="text-primary before:text-gray-900 dark:before:text-gray-100 before:-z-10">
+        <li
+          class="text-primary before:-z-10 before:text-gray-900 dark:before:text-gray-100"
+        >
           {breadcrumb}
         </li>
       {/if}

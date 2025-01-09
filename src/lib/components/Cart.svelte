@@ -1,39 +1,54 @@
 <script>
-  import {cart} from "../stores/cart.svelte.js";
+  import { cart } from "../stores/cart.svelte.js";
   import Trash from "./icons/Trash.svelte";
 </script>
 
 {#if cart.items.length > 0}
   {#each cart.items as item, index}
-    <div class="flex flex-col md:flex-row py-4 border-t border-gray-300 dark:border-gray-800">
-      <a href={item.link} class="p-0 md:p-4 shrink-0 " >
-        <img class="w-28" src="/images/shop/{item.image}.png" alt={item.name + " image"}>
+    <div
+      class="flex flex-col border-t border-gray-300 py-4 md:flex-row dark:border-gray-800"
+    >
+      <a href={item.link} class="shrink-0 p-0 md:p-4">
+        <img
+          class="w-28"
+          src="/images/shop/{item.image}.png"
+          alt={item.name + " image"}
+        />
       </a>
-      <div class="flex flex-col justify-center w-full ps-0 md:ps-6">
+      <div class="flex w-full flex-col justify-center ps-0 md:ps-6">
         <div class="flex">
-          <div class="flex flex-col me-3">
+          <div class="me-3 flex flex-col">
             <h3 class="mb-2">
-              <a href={item.link} class="text-gray-800 dark:text-gray-200 text-xl font-semibold transition-colors hover:text-primary" >
+              <a
+                href={item.link}
+                class="text-xl font-semibold text-gray-800 transition-colors hover:text-primary dark:text-gray-200"
+              >
                 {item.name}
               </a>
             </h3>
-            <div class="flex gap-3 lg:flex-col lg:gap-0 xl:flex-row xl:gap-3 text-gray-600 text-sm">
+            <div
+              class="flex gap-3 text-sm text-gray-600 lg:flex-col lg:gap-0 xl:flex-row xl:gap-3"
+            >
               {#if item?.color}
                 <div>
                   Color:
-                  <span class="text-gray-900 dark:text-gray-200 font-medium">{item.color}</span>
+                  <span class="font-medium text-gray-900 dark:text-gray-200"
+                    >{item.color}</span
+                  >
                 </div>
               {/if}
               {#if item?.weight}
                 <div>
                   Weight:
-                  <span class="text-gray-900 dark:text-gray-200 font-medium">{item.weight}</span>
+                  <span class="font-medium text-gray-900 dark:text-gray-200"
+                    >{item.weight}</span
+                  >
                 </div>
               {/if}
             </div>
           </div>
-          <div class="flex flex-col items-end ms-auto">
-            <div class="text-gray-800 dark:text-gray-500 text-xl mb-2">
+          <div class="ms-auto flex flex-col items-end">
+            <div class="mb-2 text-xl text-gray-800 dark:text-gray-500">
               ${item.price.toFixed(2)}
             </div>
             {#if item?.oldPrice}
@@ -43,29 +58,29 @@
             {/if}
           </div>
         </div>
-        <div class="flex font-medium -ms-4">
+        <div class="-ms-4 flex font-medium">
           <button
-            class="text-xl size-12 shrink-0"
+            class="size-12 shrink-0 text-xl"
             onclick={() => cart.decreaseItemQuantity(index)}
           >
             -
           </button>
-          <div class="flex items-center justify-center w-6"> {item.qty} </div>
+          <div class="flex w-6 items-center justify-center">{item.qty}</div>
           <button
-            class="text-xl size-12 shrink-0"
+            class="size-12 shrink-0 text-xl"
             onclick={() => cart.increaseItemQuantity(index)}
           >
             +
           </button>
         </div>
         <div class="flex justify-end">
-          <button onclick="{() => cart.removeItem(index)}" title="Remove"> <Trash /></button>
+          <button onclick={() => cart.removeItem(index)} title="Remove">
+            <Trash /></button
+          >
         </div>
       </div>
     </div>
   {/each}
 {:else}
-  <div class="flex items-center pb-8 text-gray-700">
-    No items yet
-  </div>
+  <div class="flex items-center pb-8 text-gray-700">No items yet</div>
 {/if}
