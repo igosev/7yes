@@ -11,7 +11,7 @@
       <a href={item.link} class="shrink-0 p-0 md:p-4">
         <img
           class="w-28"
-          src="/images/shop/{item.image}.png"
+          src="./images/shop/{item.image}.png"
           alt={item.name + " image"}
         />
       </a>
