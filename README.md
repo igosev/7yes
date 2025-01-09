@@ -15,5 +15,5 @@
 
 ## Technologies used
 1. JavaScript - Svelte, Vite;
-2. CSS - Tailwind, DaisyUI;
+2. CSS - SCSS, Tailwind, DaisyUI;
 3. Code formatting - Prettier.
