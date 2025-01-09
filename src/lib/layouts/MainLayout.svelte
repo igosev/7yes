@@ -15,16 +15,16 @@
 <header
   class="container sticky top-0 z-50 mx-auto flex items-center bg-base-100 px-4 py-5 md:px-8"
 >
-  <a href="/" class="lg:me-12 xl:me-24" title="7 yes">
+  <a href="./" class="lg:me-12 xl:me-24" title="7 yes">
     <Logo />
   </a>
   <Menu />
   <ThemeSwitch />
   <div class="flex gap-3 px-1.5 lg:gap-6 lg:px-3">
-    <a href="/" class="link">
+    <a href="./" class="link">
       <Search />
     </a>
-    <a href="/" class="link">
+    <a href="./" class="link">
       <User />
     </a>
   </div>
@@ -38,7 +38,7 @@
   class="container mx-auto px-4 pb-12 pt-6 text-sm text-gray-600 md:px-8 lg:py-12"
 >
   © All rights reserved. Made by <a
-    href="/"
+    href="./"
     class="text-gray-800 transition-colors hover:text-primary dark:text-gray-200"
     >7 yes</a
   >

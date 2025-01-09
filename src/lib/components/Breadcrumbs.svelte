@@ -7,7 +7,7 @@
     {#each breadcrumbs as breadcrumb, index}
       {#if index < breadcrumbs.length - 1}
         <li class="before:-z-10">
-          <a href="/" class="text-gray-600 hover:!no-underline">
+          <a href="./" class="text-gray-600 hover:!no-underline">
             {breadcrumb}
           </a>
         </li>

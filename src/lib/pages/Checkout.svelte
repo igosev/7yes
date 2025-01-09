@@ -249,7 +249,7 @@
       <span class="label-text text-gray-600">
         Your personal information will be used to process your order, to support
         your experience on this site and for other purposes described in the <a
-          href="/"
+          href="./"
           class="link link-primary">privacy policy</a
         >
       </span>
